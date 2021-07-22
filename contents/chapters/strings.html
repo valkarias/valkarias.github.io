@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Strings</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js"></script>
+        <script src="../../header.js"></script>
+
+        <div class="content">
+            <h2 class="title">Strings</h2>
+
+            <p class="paragraph">
+                A string is a sequence of characters, its an immutable data type in Pcrap, They can be created using double quotes or single quotes.
+            </p>
+
+            <h3>Concatenation</h3>
+            <p class="paragraph">
+                Concatenation between strings is done by the <span class="practical">+</span> operator, its the only operator that allows either 2 strings or numbers operand types.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//Hello fellow, reader!
+"Hello fellow, " + "reader!"; 
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Indexing</h3>
+            <p class="paragraph">
+                You can access a single character by index in a string like so
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"Wow"[0]; //W
+"Wow"[1]; //o
+"Wow"[2]; //W
+
+let wow = "Wow";
+wow[0]; //W
+                    </code></pre>
+                </div>
+            </p>
+
+            <h2 class="title">Methods</h2>
+            <p class="paragraph">
+                All the current methods of a string object.
+            </p>
+
+            <h3>length()</h3>
+            <p class="paragraph">
+                Returns the length of the given string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"wow".length(); //3
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>number()</h3>
+            <p class="paragraph">
+                Return a casted number from the given string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"1".number(); //1
+"a".number(); //error
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>split(delimiter: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns a list of sub-strings, it splits a string by the given delimiter.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//["wow", "wow"]
+"wow;wow".split(";");
+
+//["Code", "Clean"]
+"CodeisClean".split("is");
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>lower()</h3>
+            <p class="paragraph">
+                Returns the lowercase version of the given string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"COOL".lower(); //cool
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>upper()</h3>
+            <p class="paragraph">
+                Returns the uppercase version of the given string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"cool".upper(); //COOL
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>capitalize()</h3>
+            <p class="paragraph">
+                Returns a version of the given string with its first character capitalized.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"cool".capitalize(); //Cool
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>startsWith(prefix: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if the given string starts with the given prefix. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"cool".startsWith("c"); //true
+
+"cool".startsWith("co"); //true
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>endsWith(suffix: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if the given string ends with the given suffix. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"cool".endssWith("l"); //true
+
+"cool".endsWith("ol"); //true
+
+"cool".endsWith("ool"); //true
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>isAlpha()</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if the given string's characters are all alphabetic and the string is not empty. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"wow".isAlpha(); //true
+
+"wow1".isAlpha(); //false
+
+"".isAlpha(); //false
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>isDigit()</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if the given string's characters are all digits and the string is not empty. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"wow1".isDigit(); //false
+
+"".isDigit(); //false
+
+"12345".isDigit(); //true
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>isSpace()</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if the given string's characters are all whitespaces and the string is not empty. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"w  ".isSpace(); //false
+
+"".isSpace(); //false
+
+"   ".isSpace(); //true
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>trimSpace()</h3>
+            <p class="paragraph">
+                Returns a version of the given string with leading and trailing space characters removed.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"w  ".trimSpace(); //w
+
+"   w  ".trimSpace(); //w
+
+"s p a c e".trimSpace(); //space
+                    </code></pre>
+                </div>
+            </p>
+
+        </div>
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>

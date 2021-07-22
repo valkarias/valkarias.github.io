@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Data Types</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js"></script>
+        <script src="../../header.js"></script>
+
+        <div class="content">
+            <h2 class="title">Data Types</h2>
+
+            <h3>Numbers</h3>
+            <!-- numbers -->
+            <p class="paragraph">
+                Integers, floats and hexadecimal numbers.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+130;
+12.42;
+0xff;
+                    </code></pre>
+                </div>
+            </p>
+            <!-- end numbers -->
+
+            <!-- strings -->
+            <h3>Strings</h3>
+            <p class="paragraph">
+                Strings can be created using either double quotes or single quotes.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"What's up";
+'Hey!';
+                    </code></pre>
+                </div>
+            </p>
+            <!-- end strings -->
+
+            <!-- booleans -->
+            <h3>Booleans</h3>
+
+            <p class="paragraph">
+                Booleans can be either true or false, Thanks George Boole.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+true;
+false;
+                    </code></pre>
+                </div>
+            </p>
+            <!-- end booleans -->
+
+            <!-- lists -->
+            <h3>Lists</h3>
+
+            <p class="paragraph">
+                Lists carry their own world, they can hold any datatype including themselves.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1, "Wow", false, []];
+                    </code></pre>
+                </div>
+            </p>
+            <!-- end lists -->
+
+            <!-- other -->
+            <h2 class="title">Variables</h2>
+
+            <p class="paragraph">
+                Variables are your little companions, they are "named" values.<br><br>
+
+                Creating variables is done by the <span class="practical">let</span> keyword, followed by a name and <span class="practical">=</span><br>
+                Then a value.
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let number = 1;
+let String = "variable";
+let itsTrue = true;
+let a_list = [1, 2.4, 0xff];
+                    </code></pre>
+                </div>
+            </p>
+
+            <p class="paragraph">
+                <br>
+                A Variable can be accessed by its name in anytime as long as its defined
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let number = 1;
+
+number + 2; // 3
+                    </code></pre>
+                </div>
+            </p>
+
+            <p class="paragraph">
+                <br>
+                You can update a variable's value later like so:
+                
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let number = 1;
+number = 2;
+
+number + 2; // 4
+                    </code></pre>
+                </div>
+            </p>
+
+            <p class="paragraph">
+                <br>
+                Or you can update its type
+                
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let number = 1;
+number = "Changed";
+
+print number; // Changed
+                    </code></pre>
+                </div>
+            </p>
+
+            <p class="paragraph">
+                <br>
+                You made it to the end of your first guide!
+            </p>
+        </div>
+
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>

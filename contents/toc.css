@@ -1,0 +1,46 @@
+.content {
+    margin-left: 8%;
+
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+
+    font-family: 'Arvo', Arvo;
+
+}
+
+.content .title {
+    color: rgb(82, 82, 82);
+    font-size: 2.4em;
+    line-height:  1.8em;
+    font-weight:  900px;
+
+    margin-bottom: 20px;
+}
+.table .children {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-left: 1px solid #afe4ffcc;
+}
+
+.table h3 {
+    color: #1481b8;
+    font-size: 1.2em;
+    line-height:  1.6em;
+    font-weight:  400px;
+
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.table li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.table li a {
+    color: #1481b8;
+    font-size: 17px;
+    text-decoration: none;
+}

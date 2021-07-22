@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: rgb(252, 252, 252); */
+    background-color: #fcfcfc;
+    transition: 0.5s;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+    padding: 17px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F38D71;
+}
+header .title {
+    margin: auto;
+
+    position: relative;
+    font-size: 3.5em;
+    color: #FCC777;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+footer {
+    width:  100%;
+    padding: 17px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .title {
+    margin: auto;
+
+    position: relative;
+    font-size: 1.6em;
+    color: #1481b8;
+
+    opacity: 40%;
+    transition: 0.3s;
+    font-weight: 400;
+    text-decoration: none;
+
+    font-family: 'Arvo', Arvo;
+}
+
+
+footer .title:hover {
+    opacity: 100%;
+}

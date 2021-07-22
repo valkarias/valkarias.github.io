@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lists</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js"></script>
+        <script src="../../header.js"></script>
+
+        <div class="content">
+            <h2 class="title">Lists</h2>
+
+            <p class="paragraph">
+                A list is a compound data type, it is mutable and can hold other values including itself.
+            </p>
+
+            <h3>Creating a list</h3>
+            <p class="paragraph">
+                Creating a list can be done like so:
+                
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[]; //empty
+[1,2,3];
+[1, "hi", true];
+[[1,2,3]]; //nested
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Indexing</h3>
+            <p class="paragraph">
+                You can access a specific element by its index in a list. Lists are zero-indexed.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3][0]; //1
+[1,2,3][1]; //2
+[1,2,3][2]; //3
+
+let v = [1,2];
+v[0] //1
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Assigning</h3>
+            <p class="paragraph">
+                Unlike strings, you can update the values of a list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let v = [1,2,3];
+v[0] = 2; //[2, 2, 3]
+
+[5,5,5][0] = 6; //[6,5,5]
+                    </code></pre>
+                </div>
+            </p>
+
+            <h2 class="title">Methods</h2>
+            <p class="paragraph">
+                All the current methods of a list object.
+            </p>
+
+            <h3>length()</h3>
+            <p class="paragraph">
+                Returns the item's count of the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].length(); //3
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>append(item: <span class="practical">any</span>)</h3>
+            <p class="paragraph">
+                Adds a new item  at the end of the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].append(4); //[1,2,3,4]
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>remove(index: <span class="practical">number: optional</span>)</h3>
+            <p class="paragraph">
+                Removes the item at the given index from the given list when the index is provided, Otherwise it removes the last item.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].remove(2); //[1,2]
+[1,2].remove(); //[1]
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>contains(item: <span class="practical">any</span>)</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if the given item exists in the given list, Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].contains(1); //true
+
+//false
+["wow", "no!"].contains("yes!");
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>index(index: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the item at the given index if it exists in the given list, Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].index(0); //1
+
+[1,2,3].index(4); //false
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>clear()</h3>
+            <p class="paragraph">
+                Removes all the items of the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].clear(); //[]
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>all()</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if all the items of the list evaluate to true. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].all(); //true
+
+[1,2,false].all(); //false
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>any()</h3>
+            <p class="paragraph">
+                Returns <span class="practical">true</span> if any item from the list evaluate to true. Otherwise <span class="practical">false</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].any(); //true
+
+[1,"",false].any(); //true
+
+[false,false,false].any(); //false
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>reverse()</h3>
+            <p class="paragraph">
+                Returns a reversed version of the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+[1,2,3].reverse(); //[3,2,1]
+
+//[1, 2, "im first"]
+["im first", 2, 1].reverse();
+                    </code></pre>
+                </div>
+            </p>
+
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>
