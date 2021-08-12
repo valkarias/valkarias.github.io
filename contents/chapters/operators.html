@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Operators</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js"></script>
+        <script src="../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Operators & Symbols</h2>
+            <p class="paragraph">
+                This page features all the operators and symbols of pcrap along with examples & snippets.
+            </p>
+
+            <h3>Basic Airthmetic</h3>
+            <p class="paragraph">
+                Normie arithmetic, used everywhere. Operand types must be numbers, except the <span class="practical">+</span> operator can be used for string concatenation as well.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//magik :)
+1 + 2;
+1430 - 320;
+3 * 6;
+9 / 2;
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Comparison & Equality</h3>
+            <p class="paragraph">
+                Unlike arithmetic operators who only work with number operands (except <span class="practical">+</span>). Comparison works for all types however there is no implicit conversion.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+1 == 0;
+540 != 540;
+
+32 < 33;
+1320 > 0xff;
+
+1 <= 0;
+1 >= 0.13;
+
+1 == "1"; //always false.
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Logicals</h3>
+            <p class="paragraph">
+                The <span class="practical">and</span>, the <span class="practical">or</span> and the <span class="practical">!</span>. Works on any type.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+!true //false
+
+true and true; // true
+true and false; // false
+
+true or true //true
+true or false //true
+false or false //false
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Grouping</h3>
+            <p class="paragraph">
+                You can 'group' expressions using <span class="practical">(</span> closed by <span class="practical">)</span> after the expression. They are also used for calling if they are after an indentifier.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+(1 + 2) * 2; // 6
+1 + 2 * 2; // 5
+
+( 1 + 2 * 2; //error.
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Subscript</h3>
+            <p class="paragraph">
+                Subscripting can be done using the <span class="practical">[</span> closed by <span class="practical">]</span> after a <a href="lists.html">list</a> value.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+list[1];
+
+list[1 + 2];
+
+list[]; //error
+list[; //error
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Blocks</h3>
+            <p class="paragraph">
+                Blocks can be created using the <span class="practical">{</span> closed by <span class="practical">}</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+{
+    let local = "wow!";
+}
+
+if 0 {
+    print "i will get executed!";
+}
+                    </code></pre>
+                </div>
+            </p>
+
+        <script src="./general.js"></script>
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>

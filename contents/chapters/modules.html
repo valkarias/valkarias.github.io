@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Modules</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js" data-manual></script>
+        <script src="../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Modules</h2>
+            <p class="paragraph">
+                Similarly to classes and functions, modules are another big packed chunk of code represented as a file. Every file that holds some pcrap code is a module with its own namespace, accessing another module's function, variables, classes is done via importing.
+            </p>
+
+            <h3>Importing a module.</h3>
+            <p class="paragraph">
+                Importing a module is usually done at the top of a file, you can import a module using the keyword <span class="practical">use</span> followed by the path of the module file.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+<span class="token keyword">use</span> <span class="token string">"myModule.pc"</span><span class="token punctuation">;</span>
+                    </code></pre>
+                </div><br><br>
+            </p>
+
+            <p class="paragraph">
+                In the previous example, the module is not imported to current module namespace, however the code inside it will still run.
+            </p>
+
+            <h3>Accessing from a module.</h3>
+            <p class="paragraph">
+                Accessing from a module is similar to how you access from a class, to use it in the current namespace you have to give it its own identifier.
+    
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+<span class="token keyword">use</span> <span class="token string">"myModule.pc"</span> <span class="token keyword">for</span> <span class="token entity">myModule</span><span class="token punctuation">;</span>
+
+<span class="token comment">// calling hello() from myModule.</span>
+<span class="token keyword">print</span> <span class="token entity">myModule</span><span class="token punctuation">.</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    </code></pre>
+                </div><br><br>
+            </p>
+
+            <h3>The standard library.</h3>
+            <p class="paragraph">
+                The standard library is a bunch of built-in handy modules in pcrap that holds useful common operations, Importing a standard library is also done using the keyword <span class="practical">use</span>, followed by an identifier name of the module.
+    
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+<span class="token keyword">use</span> <span class="token namespace">Math</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 1</span>
+<span class="token keyword">print</span> <span class="token namespace">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    </code></pre>
+                </div><br>
+
+                <p class="paragraph">
+                    The standard library documentation is planned and is in progress.
+                </p><br><br>
+
+                <p class="paragraph">
+                    You have done it! you have finished the basics of Pcrap. Congrats!!
+                </p>
+            </p>
+        </div>
+
+        <script src="./general.js"></script>
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>

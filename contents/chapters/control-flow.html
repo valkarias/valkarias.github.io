@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Control Flow</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js"></script>
+        <script src="../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Control Flow</h2>
+            <p class="paragraph">
+                You will know about all the control flow & state in Pcrap in this chapter.
+            </p>
+
+            <h3>if Statements</h3>
+            <p class="paragraph">
+                If statements take an expression which represents the condition, if it evaluates to <span class="practical">true</span> then its body will be executed, otherwise it will either jump and skip over its body and continue the code or jump to an else clause if provided.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+if true { //true
+    print "yes"; //executed.
+}
+
+if false { //false
+    print "yes"; //skipped.
+} else {
+    print "no"; //executed.
+}
+                    </code></pre>
+                </div>
+            </p>
+
+            <h2 class="title">Loops</h2>
+            <p class="paragraph">
+                PCrap features only 2 kind of loops, and helper one as built-in method for the <a href="lists.html">list</a> object.
+            </p>
+
+            <h3>For loops</h3>
+            <p class="paragraph">
+                For loops take 3 clauses, all of them are optional. The first clause can be a local variable, the second clause is the condition and the third is an expression representing incrementing.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//i++ is a shorthand for i = i + 1.                        
+for let i = 0; i <= 5; i++ {
+    //prints numbers from 0 to 5.
+    print i;
+}
+
+for ;;; {
+    //this loop executes forever
+    print "infinite.";
+}
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>While loops</h3>
+            <p class="paragraph">
+                Similarly to if statements, while loops only take 1 expression which represents the condition, as long as the condition evaluates to <span class="practical">true</span> the while loop will keep executing its body.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+while true {
+    //this loop executes forever.
+    print "infinite"
+}
+
+let i = 0;
+while i <= 5 {
+    //prints numbers from 0 to 5.
+    print i;
+    i++;
+}
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Continue statements</h3>
+            <p class="paragraph">
+                The continue statement is used to skip an iteration inside loop. It can be only used inside the loop statements previously mentioned.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+for let i = 0; i < 5; i++ {
+    if i == 3 {
+        //skip this iteration.
+        continue;
+    }
+
+    //prints 0, 1, 2, 4.
+    print i;
+}
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Break statements</h3>
+            <p class="paragraph">
+                The break statement is used to stop a loop. It can be only used inside the loop statements previously mentioned.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+for let i = 0; i < 5; i++ {
+    if i == 3 {
+        //stop this loop.
+        break
+    }
+
+    //prints 0, 1, 2, 3.
+    print i;
+}
+
+while true {
+    //prints once.
+    print "once";
+    break;
+}
+                    </code></pre>
+                </div>
+            </p>
+
+        <script src="./general.js"></script>
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>

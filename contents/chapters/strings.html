@@ -16,7 +16,7 @@
         <script src="../../prism/prism.js"></script>
         <script src="../../header.js"></script>
 
-        <div class="content">
+        <div class="content" id="main">
             <h2 class="title">Strings</h2>
 
             <p class="paragraph">
@@ -215,7 +215,23 @@ wow[0]; //W
                 </div>
             </p>
 
+            <h3>replace(target: <span class="practical">string</span>, new: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Replaces the target sub-string with the new given string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+"apple".replace("a", "b"); // bpple
+
+// good and good
+"bad and bad".replace("bad", "good");
+                    </code></pre>
+                </div>
+            </p>
+
         </div>
+
+        <script src="./general.js"></script>
     </section>
 
     <script src="../../footer.js"></script>

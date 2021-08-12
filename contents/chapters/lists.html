@@ -16,7 +16,7 @@
         <script src="../../prism/prism.js"></script>
         <script src="../../header.js"></script>
 
-        <div class="content">
+        <div class="content" id="main">
             <h2 class="title">Lists</h2>
 
             <p class="paragraph">
@@ -186,6 +186,58 @@ v[0] = 2; //[2, 2, 3]
                 </div>
             </p>
 
+            <h3>copy()</h3>
+            <p class="paragraph">
+                Returns an exact copy of the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let v = [1,2,3];
+
+let c = v.copy(); //[1,2,3]
+
+c.reverse();
+
+// v: [1,2,3]
+// c: [3,2,1]
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>flatten()</h3>
+            <p class="paragraph">
+                Merges and flatten nested lists into a 1 giant list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let v = [ [1,2,3],[4,5],6 ];
+
+// [1,2,3,4,5,6]
+v.flatten();
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>forEach(callback: <span class="practical">function</span>)</h3>
+            <p class="paragraph">
+                Runs the passed callback on every element of the given list. The callback must take 1 argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let v = [1,2,3];
+
+v.forEach(lambda (x) -> {
+    // short for x = x + 1
+    x++;
+    return x;
+});
+
+// [2,3,4]
+                    </code></pre>
+                </div>
+            </p>
+
+            <script src="./general.js"></script>
     </section>
 
     <script src="../../footer.js"></script>

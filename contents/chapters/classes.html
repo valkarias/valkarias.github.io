@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Classes</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../prism/prism.js"></script>
+        <script src="../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Classes</h2>
+            <p class="paragraph">
+                Classes are another big chunk of code that can have states and functions called methods, They are an object by themselves that provide a blueprint for objects.
+            </p>
+
+            <h3>Creating a class.</h3>
+            <p class="paragraph">
+                Creating a class is done by the <span class="practical">class</span> keyword followed by a name, then a body.
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+class Alive {
+    // class.
+}
+
+// instance object.
+let person = Alive(); 
+                    </code></pre>
+                </div><br><br>
+            </p>
+
+            <h3>Constructor.</h3>
+            <p class="paragraph">
+                A constructor is a method that is invoked when creating a new instance of a class, in other words 'calling' a class will just invoke the constructor method which is <span class="practical">init</span>
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+class Dead {
+    //constructor
+    init(final_words) {
+        final_words + "!";
+    }
+}
+
+Dead("im not dead.");
+                    </code></pre>
+                </div><br><br>
+            </p>
+
+            <h3>Attributes.</h3>
+            <p class="paragraph">
+                Attributes are defined in the constructor method and can be accessed through instances. Creating an attribute can be done with the <span class="practical">this</span> keyword which references to the instance you are accessing, followed by a name and then the value of the property. They can also be created on the object directly.
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+class Player {
+    // constructor
+    init (name) {
+        // new attribute
+        this.name = name;
+    }
+}
+
+let v = Player("Mr.P");
+v.name; //Mr.P
+                    </code></pre>
+                </div><br><br>
+            </p>
+
+            <h3>Methods.</h3>
+            <p class="paragraph">
+                Methods are <a href="./functions.html">functions</a> defined within a class and can be called and also accessed.
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+class Player {
+    init (name) {
+        this.name = name;
+    }
+
+    // method.
+    getName () {
+        return this.name;
+    }
+}
+
+let v = Player("Mr.P");
+v.getName(); //Mr.P
+                    </code></pre>
+                </div><br><br>
+            </p>
+
+        </div>
+
+        <script src="./general.js"></script>
+    </section>
+
+    <script src="../../footer.js"></script>
+</body>
+</html>
