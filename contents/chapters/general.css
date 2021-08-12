@@ -19,7 +19,7 @@
 }
 
 .content h3 {
-    font-size: 1.4em;
+    font-size: 1.7vw;
     font-weight: 300;
     text-decoration: none;
 
@@ -85,6 +85,29 @@
     width: 30%;
 }
 
+@media screen and (max-width: 500px) {
+    .content {
+        top: 50px;
+    }
+
+    .content .snippet {
+        width: 100%;
+    }
+
+    .content .paragraph {
+        font-size: 15px;
+    }
+
+    .content h3 {
+        font-size: 1.2em;
+    }
+
+    section {
+        overflow: hidden;
+        padding: 30px;
+    }
+}
+
 .content .code-snippet {
     display: flex;
     align-items: center;
@@ -107,4 +130,14 @@
     padding-right: 15px;
 
     overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .content .code-snippet {
+        display: none;
+    }
+    
+    .content .table {
+        width: auto;
+    }
 }

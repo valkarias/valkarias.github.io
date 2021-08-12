@@ -16,7 +16,7 @@
 
 .content .title h2 {
     color: rgb(102, 102, 102);
-    font-size: 4em;
+    font-size: 4vw;
     line-height:  1.5em;
     font-weight:  900px;
 }
@@ -64,4 +64,35 @@
 #middle-section {
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+@media screen and (max-width: 500px) {
+    .content .title p {
+        font-size: 2.5vw !important;
+    }
+}
+
+@media screen and (max-width: 1142px) {
+    .content .example-snippet {
+        background: none;
+        box-shadow: none;
+        border-radius: 0px;
+        width: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content .title a {
+        font-size: 12px;
+    }
+
+    .content .title #gh {
+        border: 0px;
+        margin-left: 0px;
+        padding: 6px 15px;
+    }
+
+    .content .title #gh svg {
+        width: 40px;
+    }
 }

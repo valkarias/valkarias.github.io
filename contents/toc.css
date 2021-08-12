@@ -12,7 +12,7 @@
 
 .content .title {
     color: rgb(82, 82, 82);
-    font-size: 2.4em;
+    font-size: 2.5vw;
     line-height:  1.8em;
     font-weight:  900px;
 
@@ -26,7 +26,7 @@
 
 .table h3 {
     color: #1481b8;
-    font-size: 1.2em;
+    font-size: 1.3vw;
     line-height:  1.6em;
     font-weight:  400px;
 
@@ -41,6 +41,24 @@
 
 .table li a {
     color: #1481b8;
-    font-size: 17px;
+    font-size: 1.1vw;
     text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        margin-left: 0%;
+    }
+
+    .table h3 {
+        font-size: 2.5vw !important;
+    }
+
+    .table li a {
+        font-size: 2.7vw;
+    }
+
+    .content .title {
+        font-size: 3.5vw;
+    }
 }
