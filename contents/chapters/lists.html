@@ -218,7 +218,24 @@ v.flatten();
                 </div>
             </p>
 
-            <h3>forEach(callback: <span class="practical">function</span>)</h3>
+            <h3>slice(end: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns a copy of a portion of the given list specified by the <span class="practical">end</span> argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+let v = [1,2,3,4];
+
+// [1,2]
+v.slice(2);
+
+//[]
+v.slice(-1);
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>repeat(callback: <span class="practical">function</span>)</h3>
             <p class="paragraph">
                 Runs the passed callback on every element of the given list. The callback must take 1 argument.
 
@@ -226,7 +243,7 @@ v.flatten();
                     <pre><code class="language-js">
 let v = [1,2,3];
 
-v.forEach(lambda (x) -> {
+v.repeat(lambda (x) -> {
     // short for x = x + 1
     x++;
     return x;
