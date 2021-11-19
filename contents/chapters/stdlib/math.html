@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Math</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../../prism/prism.js"></script>
+        <script src="../../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Math</h2>
+
+            <p class="paragraph">
+                Contains common math operations.
+            </p>
+
+            <h2 class="title">Functions</h2>
+            <p class="paragraph">
+                All the current functions of the math module.
+            </p>
+
+            <h3>abs(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the absolute value of the given number argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.abs(-1); //1
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>floor(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Rounds the given number down to the nearest integer.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.floor(2.5); //2
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>round(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns a 'rounded' number from the given specified number argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.round(2.75); //3
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>ceil(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns a ceiling value of the given number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.ceil(1.5); //2
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>log(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the natural logarithm of the given number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.log(1); //0
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>exp(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the exponential of the given number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//22026.4657948067
+Math.exp(10);
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>sqrt(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the square root of the given number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.sqrt(25); // 5
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>clamp(minimum: <span class="practical">number</span>, prefered: <span class="practical">number</span>, maximum: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Similarly to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()">CSS clamp function</a> it returns a value between an upper and lower bound.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.clamp(1, 3.5, 2); //2
+Math.clamp(1, 1.5, 2); //1.5
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>sin(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the sine of the given number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.sin(45); //0.850903524534118
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>cos(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the cosine of the given number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.cos(45); //0.52532198881773
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>tan(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the tangent of the given number
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.tan(45); //1.61977519054386
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>asin(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the arc sine of the given number. Otherwise a math domain error if failed.
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.asin(0.5); //0.523598775598299
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>acos(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the arc cosine of the given number. Otherwise a math domain error if failed.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.acos(0.5) //1.0471975511965979
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>atan(number: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the arc tangent of the given number
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.atan(3); //1.24904577239825
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>min(numbers: <span class="practical">list</span>)</h3>
+            <p class="paragraph">
+                Returns the smallest number in the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.min([1,2,6,4]); //1
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>max(numbers: <span class="practical">list</span>)</h3>
+            <p class="paragraph">
+                Returns the biggest number in the given list.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.max([0,22,9,4]); //22
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>gcd(number1: <span class="practical">number</span>, number2: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the greatest common divisor of the first number argument and the second.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.gcd(1200, 320); //80
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>pow(number1: <span class="practical">number</span>, number2: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the power of the given number arguments
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.pow(5, 2); //25
+                    </code></pre>
+                </div>
+            </p>
+
+            <h2 class="title">Properties</h2>
+            <p class="paragraph">
+                All the current properties of the math module.
+            </p>
+
+            <h3>Eular's number</h3>
+            <p class="paragraph">
+                Represents the Eular's number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.e //2.71828182845905
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Value of PI</h3>
+            <p class="paragraph">
+                Represents the value of pi.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.pi //3.14159265358979
+                    </code></pre>
+                </div>
+            </p>
+
+            <script src="./general.js"></script>
+    </section>
+
+    <script src="../../../footer.js"></script>
+</body>
+</html>
