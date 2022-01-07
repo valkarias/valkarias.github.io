@@ -86,25 +86,6 @@
                 </div><br><br>
             </p>
 
-            <h3>'Protected' functions.</h3>
-            <p class="paragraph">
-                In short, protected functions are functions that actually return a value, PCrap does not have a <span class="practical">null</span> type, so you must return from a function. Otherwise a compile time error will notify you about this.
-                <div class="code-snippet">
-                    <pre><code class="language-js">
-<span class="token comment">//error</span>
-<span class="token keyword">define <span class="token symbol">say_hello_to </span></span><span class="token punctuation">(</span><span class="token variable">person</span><span class="token punctuation">)</span><span class="token punctuation"> {</span>
-    <span class="token builtin">print <span class="token string">"Hello, " <span class="token punctuation">+</span> <span class="token entity">person</span> <span class="token punctuation">+</span> "!"</span><span class="token punctuation">;</span></span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//ok</span>
-<span class="token keyword">define <span class="token symbol">say_hello_to </span></span><span class="token punctuation">(</span><span class="token variable">person</span><span class="token punctuation">)</span><span class="token punctuation"> {</span>
-    <span class="token builtin">print <span class="token string">"Hello, " <span class="token punctuation">+</span> <span class="token entity">person</span> <span class="token punctuation">+</span> "!"</span><span class="token punctuation">;</span></span>
-    <span class="token important">return </span><span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-                    </code></pre>
-                </div><br><br>
-            </p>
-
             <h3>Anonymous functions.</h3>
             <p class="paragraph">
                 Anonymous functions are expressions functions that can be created using the keyword <span class="practical">lambda</span> followed by a list of arguments, then an arrow (<span class="practical">-></span>) and finally an expression or a body. They also can be called.
