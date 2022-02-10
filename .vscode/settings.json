@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "cstdio": "c",
+        "cstdlib": "c",
+        "cwchar": "c",
+        "cwctype": "c"
+    }
+}

@@ -31,6 +31,19 @@
     margin-top: 40px;
 }
 
+.content h4 {
+    font-size: 1.5vw;
+    font-weight: 200;
+    text-decoration: none;
+
+    font-family: 'Arvo', Arvo;
+
+    line-height: 1.8em;
+
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
 .content .paragraph {
     font-weight: 150;
 

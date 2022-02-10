@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Path</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../../prism/prism.js"></script>
+        <script src="../../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Path</h2>
+
+            <p class="paragraph">
+                Contains common operations for path manipulations.
+            </p>
+
+            <h2 class="title">Functions</h2>
+            <p class="paragraph">
+                All the current functions of the path module.
+            </p>
+
+            <h3>basename(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns the basename of the path string argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.basename("/user/bin"); //bin
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>extension(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns the extension in the given path argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.extension("/user/bin/something.exe"); 
+//exe
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>dirname(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns the directory tree name of the given path.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.dirname("/user/bin/something/app.exe"); 
+// /user/bin/something/
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>isDir(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns true if the path leads to a directory, otherwise false.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.isDir("/user/fakeDirectory.txt"); 
+//false
+                    </code></pre>
+                </div>
+            </p>            
+
+            <h3>isFile(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns true if the path leads to an actual file, otherwise false.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.isFile("/user/fakeDirectory.txt"); 
+//true
+                    </code></pre>
+                </div>
+            </p>   
+            
+            <h3>real(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns an absolute path for the given relative path.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.real("/user/bin/something/app.exe"); 
+// C:\user\bin\something\app.exe
+                    </code></pre>
+                </div>
+            </p>   
+
+            <h2 class="title">Properties</h2>
+            <p class="paragraph">
+                All the current properties of the path module.
+            </p>
+
+            <h3>Separator</h3>
+            <p class="paragraph">
+                Represents the file and directory path seperator, changes depending on the platform.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Math.separator;
+// '\' on windows
+// '/' on others
+                    </code></pre>
+                </div>
+            </p>
+
+            <script src="./general.js"></script>
+    </section>
+
+    <script src="../../../footer.js"></script>
+</body>
+</html>
