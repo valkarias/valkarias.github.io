@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Os</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../prism/prism.css'>
+</head>
+<body>
+    <!-- TODO: complete. -->
+    <section>
+        <script src="../../../prism/prism.js"></script>
+        <script src="../../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Os</h2>
+
+            <p class="paragraph">
+                Contains common operations for Os & System related functionality.
+            </p>
+
+            <h2 class="title">Functions</h2>
+            <p class="paragraph">
+                All the current functions of the Os module.
+            </p>
+
+            <h3>exit(code: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Directly exit the script with the given code argument.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.exit(0); //success
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>clock()</h3>
+            <p class="paragraph">
+                Returns the number of clock ticks since the program was launched.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.clock();
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>time()</h3>
+            <p class="paragraph">
+                Returns the time since the Epoch (00:00:00 UTC, January 1, 1970).
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.time();
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>remove(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Deletes a file specified by the path argument. Returns <span class="practical">0</span> on success otherwise <span class="practical">-1</span> on failure.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.remove("some/real/file.txt"); //0
+                    </code></pre>
+                </div>
+            </p>            
+
+            <h3>mkdir(path: <span class="practical">string</span>, mode<span style="font-size: 15px;">?</span>: <span class="practical">number</span> )</h3>
+            <p class="paragraph">
+                Makes a directory specified by the path argument along a number argument that specifies the mode, by default it's <span class="practical">0777</span>.<br> Returns <span class="practical">0</span> on success otherwise <span class="practical">-1</span> on failure.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.mkdir("some/real/directory"); //0
+                    </code></pre>
+                </div>
+            </p>   
+            
+            <h3>rmdir(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Removes a directory. Returns <span class="practical">0</span> on success otherwise <span class="practical">-1</span> on failure.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.rmdir("some/fake/directory.txt"); //-1
+                    </code></pre>
+                </div>
+            </p> 
+            
+            <h3>makeDirs(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Makes nested directories according to the path argument with the mode <span class="practical">0777</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.makeDirs("some/directory1/directory2");
+//0
+                    </code></pre>
+                </div>
+            </p>  
+
+            <h2 class="title">Properties</h2>
+            <p class="paragraph">
+                All the current properties of the path module.
+            </p>
+
+            <h3>File permissions</h3>
+            <p class="paragraph">
+                Different properties to check for the different permissions of a file.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.F_OK // test for file existence
+Os.X_OK // test for execution permission
+Os.W_OK // test for write permission
+Os.R_OK // test for read permission
+                    </code></pre>
+                </div>
+            </p>
+
+    </section>
+
+    <script src="../../../footer.js"></script>
+</body>
+</html>
