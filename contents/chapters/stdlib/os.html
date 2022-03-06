@@ -71,7 +71,41 @@ Os.time();
 Os.remove("some/real/file.txt"); //0
                     </code></pre>
                 </div>
-            </p>            
+            </p>           
+            
+            <h3>getHome()</h3>
+            <p class="paragraph">
+                Returns the home location of the user's system as a string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.getHome(""); //C:\Users\Someone
+                    </code></pre>
+                </div>
+            </p>
+            
+            <h3>getCwd()</h3>
+            <p class="paragraph">
+                Returns the current working directory as a string. Otherwise <span class="practical">-1</span> incase of failure.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.getCwd(""); 
+// *Inserts current working directory*
+                    </code></pre>
+                </div>
+            </p> 
+            
+            <h3>setCwd(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Sets the current working directory to the path argument. Returns <span class="practical">-1</span> incase of failure otherwise <span class="practical">0</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Os.setCwd("some/other/directory"); //0
+                    </code></pre>
+                </div>
+            </p>  
 
             <h3>mkdir(path: <span class="practical">string</span>, mode<span style="font-size: 15px;">?</span>: <span class="practical">number</span> )</h3>
             <p class="paragraph">
