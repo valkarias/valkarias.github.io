@@ -218,19 +218,19 @@ v.flatten();
                 </div>
             </p>
 
-            <h3>slice(end: <span class="practical">number</span>)</h3>
+            <h3>slice(start: <span class="practical">number</span>, end: <span class="practical">number</span>)</h3>
             <p class="paragraph">
-                Returns a copy of a portion of the given list specified by the <span class="practical">end</span> argument.
+                Returns a copy of a portion of the given list specified by the <span class="practical">start</span> & <span class="practical">end</span> arguments.
 
                 <div class="code-snippet">
                     <pre><code class="language-js">
 let v = [1,2,3,4];
 
-// [1,2]
-v.slice(2);
+// [1, 2, 3]
+v.slice(0, 2);
 
 //[]
-v.slice(-1);
+v.slice(0, -1);
                     </code></pre>
                 </div>
             </p>

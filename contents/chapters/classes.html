@@ -95,7 +95,69 @@ v.getName(); //Mr.P
                 </div><br><br>
             </p>
 
-        </div>
+        <h3 class="title">Access Levels.</h3>
+        <p class="paragraph">
+            Access levels in classes is the ability to offer a class to hide or expose a portion of the functionality it implements. In Pcrap You can either
+            make it inaccessible by making it private or accessible to make it available for use, this ability is only possible to methods and attributes of an instance.
+
+            <br><br>By default, every property & method is public.
+            <br>Creating a private property can be done by the <span class="practical">private</span> keyword then the name of the attribute comes after, and finally a value.
+            <div class="code-snippet">
+                <pre><code class="language-js">
+class Player {
+    init (name) {
+        // private property.
+        private name = name;
+    }
+
+    // method.
+    getName () {
+        return this.name;
+    }
+}
+
+//instance
+let x = Player("John");
+
+//public method use.
+x.getName(); //John
+
+//private property use.
+x.name //error. 
+                </code></pre>
+            </div><br><br>
+        </p>
+
+        <p class="paragraph">Private methods work the same mostly.
+            <div class="code-snippet">
+                <pre><code class="language-js">
+class Creature {
+    init (health) {
+        // private property.
+        private hp = health;
+    }
+
+    // private method.
+    private getHealth () {
+        return this.hp;
+    }
+
+    printHealth() {
+        print(this.getHealth());
+    }
+}
+
+let monster = Creature(100);
+
+//public method use.
+monster.printHealth(); //100
+
+//private method use
+monster.getHealth(); //error.
+                </code></pre>
+            </div><br><br>
+        </p>
+    </div>
 
         <script src="./general.js"></script>
     </section>

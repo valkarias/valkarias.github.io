@@ -66,7 +66,43 @@
 
                 <p class="paragraph">
                     The standard library documentation is planned and is in progress.
-                </p><br><br>
+                </p>
+                
+                <h3 class="title">Private Values.</h3>
+                <p class="paragraph">
+                    Private or local values to a module. To modules, it works mostly like <a href="classes.html">classes</a> explained in the previous chapter, it prevents the private values from being used by other modules incase of imports. 
+                    This ability applies to any value in the module.
+    
+                    <div class="code-snippet">
+                        <pre><code class="language-js">
+<span class="token comment">// private values in Module1.</span>
+<span class="token keyword">private</span> <span class="token keyword">let</span> <span class="token variable">x </span><span class="token punctuation">= </span><span class="token number">0</span><span class="token punctuation">;</span>
+<!-- function -->
+<span class="token keyword">private </span><span class="token keyword">define <span class="token symbol">add </span></span><span class="token punctuation">(</span><span class="token variable">a</span><span class="token punctuation">,</span><span class="token variable"> b</span><span class="token punctuation">)</span><span class="token punctuation"> {</span>
+    <span class="token keyword">return <span class="token entity">a</span><span class="token punctuation"> + </span><span class="token entity">b</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+<!-- class -->
+<span class="token keyword">private </span><span class="token keyword">class <span class="token class-name">SomeClass</span></span></span><span class="token punctuation"> {</span>
+    <span class="token comment">//...</span>
+<span class="token punctuation">}</span>
+                    </code></pre>
+                </div><br><br>
+                </p>
+                
+                <p class="paragraph">
+                    Now if we head to the second Module.
+    
+                    <div class="code-snippet">
+                        <pre><code class="language-js">
+<span class="token comment">// Module2.</span>
+
+<span class="token comment">// import Module1.</span>
+<span class="token keyword">use</span> <span class="token string">"Module1.pc"</span><span class="token keyword"> for</span> <span class="token entity">module1</span><span class="token punctuation">;</span>
+
+<span class="token namespace">module1</span><span class="token punctuation">.</span><span class="token property">x</span></span><span class="token punctuation">;</span><span class="token comment"> //error.</span>
+                    </code></pre>
+                </div><br><br>
+                </p><br><br><br><br>
 
                 <p class="paragraph">
                     You have done it! you have finished the basics of Pcrap. Congrats!!
