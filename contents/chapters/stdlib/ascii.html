@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ascii</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../../prism/prism.js"></script>
+        <script src="../../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">Ascii</h2>
+
+            <p class="paragraph">
+                Contains common operations for character conversion & such.
+            </p>
+
+            <h2 class="title">Functions</h2>
+            <p class="paragraph">
+                All the current functions of the Ascii module.
+            </p>
+
+            <h3>ascii(code: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Returns the character from its given code point number.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Ascii.ascii(65); //A
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>code(character: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Does the reverse of the previous explained function. It returns the code point of the given character, otherwise it returns an error.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Ascii.code("A"); //65
+
+Ascii.code("AA"); //error.
+                    </code></pre>
+                </div>
+            </p>
+ 
+            <h2 class="title">Properties</h2>
+            <p class="paragraph">
+                All the current properties of the ascii module.
+            </p>
+
+            <h3>Alphabetics</h3>
+            <p class="paragraph">
+                <span class="practical">upper</span> and <span class="practical">lower</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Ascii.upper;
+
+//abcdefghijklmnopqrstuvwxyz
+Ascii.lower;
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Numerical representations</h3>
+            <p class="paragraph">
+                Contains <span class="practical">digits</span>, <span class="practical">hex</span> and <span class="practical">octal</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//0123456789
+Ascii.digits;
+
+//0123456789abcdefABCDEF
+Ascii.hex;
+
+//01234567
+Ascii.octal;
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Punctuation</h3>
+            <p class="paragraph">
+                Represents the considered punctuation characters that are local to <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Ascii.punctuation;
+//!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~
+                    </code></pre>
+                </div>
+            </p>
+
+    </section>
+
+    <script src="../../../footer.js"></script>
+</body>
+</html>

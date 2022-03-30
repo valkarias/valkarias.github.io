@@ -19,7 +19,7 @@
         <div class="content" id="main">
             <h2 class="title">Control Flow</h2>
             <p class="paragraph">
-                You will know about all the control flow & state in Pcrap in this chapter.
+                You will know about all the control flow & state in Pa in this chapter.
             </p>
 
             <h3>if Statements</h3>
@@ -43,7 +43,7 @@ if false { //false
 
             <h2 class="title">Loops</h2>
             <p class="paragraph">
-                PCrap features only 2 kind of loops, and helper one as built-in method for the <a href="lists.html">list</a> and number objects.
+                Pa features only 2 kind of loops, and helper one as built-in method for the <a href="lists.html">list</a> and number objects.
             </p>
 
             <h3>For loops</h3>
@@ -127,6 +127,23 @@ while true {
     print("once");
     break;
 }
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Assert statements</h3>
+            <p class="paragraph">
+                The assert statement check if it's condition is false, if so, it will raise a Runtime error taking the optional error message string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+assert false, "Runtime Error!";
+
+//Only condition.
+assert false;
+
+assert [1,2,3].length() == 2, 
+    "List must contain only 2 items!";
                     </code></pre>
                 </div>
             </p>

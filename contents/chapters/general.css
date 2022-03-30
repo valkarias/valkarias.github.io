@@ -19,6 +19,7 @@
 }
 
 .content h3 {
+    overflow: hidden;
     font-size: 1.7vw;
     font-weight: 300;
     text-decoration: none;
@@ -152,5 +153,14 @@
     
     .content .table {
         width: auto;
+    }
+
+    .content .sectionItem {
+        overflow: hidden;
+        font-size: 15px;
+    }
+
+    .content h3 {
+        font-size: 20px;
     }
 }
