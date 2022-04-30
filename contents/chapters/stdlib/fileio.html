@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>File</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../general.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../../prism/prism.css'>
+</head>
+<body>
+    <section>
+        <script src="../../../prism/prism.js"></script>
+        <script src="../../../header.js"></script>
+
+        <div class="content" id="main">
+            <h2 class="title">File</h2>
+
+            <!-- TODO: COMPLETE -->
+            <p class="paragraph">
+                Contains common operations for File input & output.
+            </p>
+
+            <h2 class="title">Functions</h2>
+            <p class="paragraph">
+                All the current functions of the File module.
+            </p>
+
+            <h3>open(path: <span class="practical">string</span>, mode: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Opens a file and returns a file object. <br>Taking the path & mode arguments into account, so incase of failure a runtime error will occur.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.open("someFile.txt", "w"); 
+//new file object for writing.
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>write(file: <span class="practical">object</span>, content: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Writes the content string argument to the given write-able file. Returns the number of characters written.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.write(myFile, "Hello world!"); //12
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>read(file: <span class="practical">object</span>)</h3>
+            <p class="paragraph">
+                Reads the entire content of the given read-able file and returns it as a string.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.read(myFile); //"Hello world!"
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>isEOF(file: <span class="practical">object</span>)</h3>
+            <p class="paragraph">
+                Returns a boolean whether the end-of-file flag is set for the given file.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.isEOF(myFile); //false
+                    </code></pre>
+                </div>
+            </p>           
+            
+            <h3>seek(file: <span class="practical">object</span>, offset: <span class="practical">number</span>, mode: <span class="practical">number</span>)</h3>
+            <p class="paragraph">
+                Changes the given file's position to the given coordinates <span class="practical">(offset, mode)</span>.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+//Start of the file
+File.seek(myFile, 0, 0);
+                    </code></pre>
+                </div>
+            </p>
+            
+            <h3>exists(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns a boolean whether a file exists at the given path.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.exists("someFile.txt"); //true
+                    </code></pre>
+                </div>
+            </p> 
+            
+            <h3>close(file: <span class="practical">object</span>)</h3>
+            <p class="paragraph">
+                Closes the given file.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.close(myFile);
+                    </code></pre>
+                </div>
+            </p>  
+
+            <h2 class="title">Properties</h2>
+            <p class="paragraph">
+                All the current properties of the File module.
+            </p>
+
+            <h3>Seeking Modes</h3>
+            <p class="paragraph">
+                Properties for file seeking modes.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.SEEK_SET; //start of file
+File.SEEK_CUR; //current position
+File.SEEK_END; //end of file
+                    </code></pre>
+                </div>
+            </p>
+
+            <h3>Standard IO Files</h3>
+            <p class="paragraph">
+                Represents file objects for standard input, output and error.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+File.stdout; //output
+File.stdin;  //input
+File.stderr; //error
+                    </code></pre>
+                </div>
+            </p>
+
+    </section>
+
+    <script src="../../../footer.js"></script>
+</body>
+</html>
