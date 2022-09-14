@@ -75,6 +75,19 @@ Path.isDir("/user/fakeDirectory.txt");
                 </div>
             </p>            
 
+            <h3>listDir(path: <span class="practical">string</span>)</h3>
+            <p class="paragraph">
+                Returns a list containing the given directory's content.
+
+                <div class="code-snippet">
+                    <pre><code class="language-js">
+Path.listDir(".") 
+//["myFile1", "myDir2", "myFile2"]...
+                    </code></pre>
+                </div>
+            </p>            
+
+
             <h3>isFile(path: <span class="practical">string</span>)</h3>
             <p class="paragraph">
                 Returns true if the path leads to an actual file, otherwise false.
